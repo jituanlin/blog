@@ -12,3 +12,5 @@ slug: blogs
 menu: true
 order: 1
 ---
+
+![alt text](/assets/img/blogs-bg.jpg)
