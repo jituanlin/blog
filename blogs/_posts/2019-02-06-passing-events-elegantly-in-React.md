@@ -76,15 +76,15 @@ and call `ref.doSomething` whenever you want.
 However, this is **anti-pattern**, and this is a typical example of the abuse of `ref`.
 
 According the react official document, we should only use `refs` in following situation:
->
-- Managing focus, text selection, or media playback.
-- Triggering imperative animations.
-- Integrating with third-party DOM libraries.
+
+> - Managing focus, text selection, or media playback.
+> - Triggering imperative animations.
+> - Integrating with third-party DOM libraries.
 
 In our example, using `ref` broke the best practice:
->
-Parent component should only pass props to children component,and
-children component should only react to parent component by props.
+
+> Parent component should only pass props to children component,and
+> children component should only react to parent component by props.
 
 This is not a pedantic over-design, but a lesson from my personal experience.
 
@@ -93,17 +93,17 @@ because the example is relatively simple.
 
 But in real world, bad design will pollution other modules.
 Imagine the following situation:
-1. The common component **A** expose `ref`  to upper level component `B`.
-2. The upper level component did not use it.
-3. But continue to pass to the root component `C`.
-4. And `C` pass it to `n` level component `D`.
-5. Finally, `D` component use it such as `ref.doSomething`.
+> 1. The common component **A** expose `ref`  to upper level component `B`.
+> 2. The upper level component did not use it.
+> 3. But continue to pass to the root component `C`.
+> 4. And `C` pass it to `n` level component `D`.
+> 5. Finally, `D` component use it such as `ref.doSomething`.
 
 Disadvantages of this design is: 
-- Using the `ref`, the component `A` expose to anywhere, 
+> - Using the `ref`, the component `A` expose to anywhere, 
 and the way it is used is not subject to any restrictions.
-- Component "A" is getting out of control, we hard to know when/who changes its state or execute its method.
-- Let's tell the truth, although the original developer split the code into several components, 
+> - Component "A" is getting out of control, we hard to know when/who changes its state or execute its method.
+> - Let's tell the truth, although the original developer split the code into several components, 
 but the components did not play the role of isolation logic.
 
 ## How I resolve it
