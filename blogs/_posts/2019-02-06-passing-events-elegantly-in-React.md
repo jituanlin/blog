@@ -7,7 +7,7 @@ image: /assets/img/passing-events-elegantly-in-react.jpg
 # Passing events elegantly in React
 
 
-## What is the problem
+## What problem
 Consider the following situation, in the React, sometimes we need to notify the children component to perform certain operations.
 The focus is:
 1. Children components should always perform actions when they are notified.
