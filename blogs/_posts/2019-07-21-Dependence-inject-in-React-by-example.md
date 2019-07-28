@@ -237,6 +237,11 @@ Like factory function:
       }
       return config
   }
+  
+  // in other module
+  const run = async() =>{
+    const config = await resolveConfig()
+  }
 ```
 
 Just satisfy dependence inject nature, the way is not be limited.

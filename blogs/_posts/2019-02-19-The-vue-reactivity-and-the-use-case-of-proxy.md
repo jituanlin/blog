@@ -20,7 +20,7 @@ In the Vue world, there are two key concepts:
 
 Consider following code:
 ```jsx 
-<p> the user name is: {{user.name}}</p>
+<p> the user name is: {user.name}</p>
 ```
 
 In the above code, the observer is the `template` with the content which refer the property `name` of `user` `observable`.
