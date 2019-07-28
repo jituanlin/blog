@@ -1,7 +1,7 @@
 ## Dependence inject in React by example
 
 ### Outline
-Dependence inject is a common design pattern in OOP programming, \
+Dependence inject is a common design pattern in OOP programming,
 although React community prefer functional programming, but OOP is
 not evil, in some case, the dependence inject will be a strong tool
 to decouple logic and provide safe way to reuse code.
