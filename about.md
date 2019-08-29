@@ -34,7 +34,7 @@ Maybe some understanding is naive and wrong, but it is also the growth process o
 If you find it is ridiculous, you may wish to communicate with me via [email](mailto:jituanlin@gmail.com).
 
 ## About author
-I am Jituanlin, a programmer, now focus on front-end development.
+I am Jituanlin, a programmer, focusing on front-end development.
 My tech stack includes Vue, React, and Nodejs, as well as functional programming.
 
 ## About avatar
