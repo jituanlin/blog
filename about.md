@@ -9,7 +9,7 @@ title: About
 # Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
 description: >
-  The Jituanlin's blog about page.
+  关于我
 
 # You can show the description on the page by deleting this line:
 hide_description: true
@@ -20,22 +20,15 @@ order: 4
 ---
 
 
-## About this blog
-This blog will contain some thoughts about my work and study. 
-We will not talk about some tutorial or introduction, but further, touch some inspire. 
-Programming is thinking. 
-Unfortunately, I have see too much programmer coding for livelihood, they think that thinking is a burden that prevents them from completing their work. 
-So we have seen so many terrible code, even if there is a better way to achieve it.
-Maybe I never become a best programmer, but I want to keep my thoughts while programming, 
-even as a Chinese programmer(You may not understand the hardships of Chinese programmers).
+## 关于我
+前端开发人员, 偶尔也写写后端
 
-So I created this blog for recording my thinking of coding.
-Maybe some understanding is naive and wrong, but it is also the growth process of a programmer.
-If you find it is ridiculous, you may wish to communicate with me via [email](mailto:jituanlin@gmail.com).
+熟悉函数式编程面向对象编程
 
-## About author
-I am Jituanlin, a programmer, now focus on front-end development.
-My tech stack includes Vue, React, and Nodejs, as well as functional programming.
+平时喜欢看看闲书, 也喜欢看看电影, 有兴趣可以关注我的[豆瓣](https://www.douban.com/people/184603717/).
 
-## About avatar
-The avatar is a cat I used to. Now, he has left home, perhaps for the pursuit of freedom, wish him good luck.
+博客中若有错误, 欢迎通过[我的邮箱](mailto:jituanlin@gmail.com)联系.
+
+## 关于这个博客
+
+这个博客作为我个人知识技能的系统总结, 会融入很多自己的观点, 要做到言之有物, 争议在所难免.
