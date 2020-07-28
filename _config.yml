@@ -19,33 +19,33 @@
 lang:                  en
 
 # The title of your blog. Used in the sidebar and the browser tab.
-title:                 Jituanlin's Blog
+title:                 林集团的博客
 # A short description (~150 chars) of the page used for the meta description tag.
 # Can use markdown, but no more than one paragraph (enforced by `>`)
 description:           >
-  The Jituanlin's blog.
+  林集团的博客
 
 # A shorter description for the sidebar.
 tagline:               >
-  About front-end develop, and back-end develop, as well as functional programming.
+  林集团系统化的个人知识梳理
 
 # A list of keywords for your blog.
 keywords:              [front-end-develop,functional-programming]
 
 # Used by jekyll-seo-tag.
-logo:                  /assets/img/logo.jpeg
+logo:                  /assets/imgs/logo.jpeg
 
 # This should be the same author as first entry in `_data/authors.yml`.
 author:
   # Used by `jekyll-feed`:
-  name:                jituan lin
+  name:                林集团
   email:               jituanlin@gmail.com
   # Used by `jekyll-seo-tag`:
   # twitter:             <username>
 
 # This text will appear in a `<small>` tag in the footer of every page.
 copyright:             >
-  © 2019. All rights reserved.
+  © 2020. All rights reserved.
 
 # Add links to the footer.
 # Typically you'll want to link to your impress, cookies or privacy policy, etc.

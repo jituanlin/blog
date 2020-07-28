@@ -9,8 +9,7 @@ author1:
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    I am Jituanlin, a programmer, now focus on front-end development.
-    My tech stack includes Vue, React, and Nodejs, as well as functional programming.
+    林集团, 前端工程师, 偶尔也写写后端.
 
 
   # Social media icons in sidebar.

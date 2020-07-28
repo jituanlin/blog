@@ -4,7 +4,7 @@
 layout: about
 
 # The title of the page.
-title: About
+title: 关于我
 
 # Write a short (~150 characters) description of each blog post.
 # This description is used to preview the page on search engines, social media, etc.
@@ -23,7 +23,7 @@ order: 4
 ## 关于我
 前端开发人员, 偶尔也写写后端
 
-熟悉函数式编程面向对象编程ª
+熟悉函数式编程面向对象编程
 
 平时喜欢看看闲书, 也喜欢看看电影, 有兴趣可以关注我的[豆瓣](https://www.douban.com/people/184603717/).
 
