@@ -51,18 +51,39 @@ optics为一种工具, 用于专注于复杂不可变数据结构中的*特定�
 ## optics的种类
 针对不同类型的数据, 有以下5中`optics`:
 - `lens`, 用于`product type`形数据.
-- `prisim`, 用于`sum type`形数据.
+- `prism`, 亦用于有容错处理的类型转换.
 - `optional`, 用于可缺省值(`Option`)形数据.
 - `traversal`, 用于可遍历形数据.
 - `iso`, 用于对isomorphic(同构)的两个类型之间的转换.
 
-### 使用`lens`
+## 如何使用`monocle-ts`
+
+### `monocle-ts`模块结构
+`monocle-ts`(v2.3.3开始), `import * as optics from 'monocle-ts'`将会导出一系列构造函数(`optics.Lens, optics.Prism ...`)和工厂函数(`optics.fromTraversable, optics.fromLens ...`)
+和模块(`optics.traversal, optics.lens ...`).
+
+形如`optics.Prism`等为`class`, 其中包括`get, modify, set, comoposeXXX`等常用方法.
+
+形如`optics.fromTraversable`等为工厂函数, 返回类型皆为`optics.Prism`等`class`的对象.
+
+形如`optics.traversal`等皆为模块, 模块中多为类型和**函数**定义, 其中类型如`optics.traversal.Traversal`皆为[ADT](https://jituanlin.github.io/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/2020-07-27-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%AF%BC%E8%A8%80/#%E4%BB%A3%E6%95%B0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B),
+而非`class`.
+
+### 代码示例
+
+### 补充说明`prism`, `optional`, `traversal`, `iso`
+
 
 
 
 
 ---
 参考:
-1. [思维导图源文件](https://github.com/jituanlin/public-docs/blob/master/mindmaps/optics.png)
+- [思维导图源文件](https://github.com/jituanlin/public-docs/blob/master/mindmaps/optics.png).
+- [scalac上一篇质量上乘的文章](https://scalac.io/scala-optics-lenses-with-monocle/)
 
+--- 
+注:
+- monocle-ts的作者曾发表过一篇[文章](https://medium.com/@gcanti/introduction-to-optics-lenses-and-prisms-3230e73bfcfe), 其内容已过期, 不适合再作为参考.
+ 
 
