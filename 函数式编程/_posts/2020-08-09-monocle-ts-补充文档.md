@@ -13,7 +13,7 @@ title: monocle-ts 补充文档
 
 ## 相关类型知识
 在进入正题之前, 我们先介绍下一些涉及到的类型方面的术语.
-这里所说的类型, 定义为符合某种约束的值得集合.
+这里所说的类型, 定义为符合某种约束的值的集合.
 
 ###  product type(交集类型)
 例:
@@ -70,13 +70,41 @@ optics为一种工具, 用于专注于复杂不可变数据结构中的*特定�
 而非`class`.
 
 ### 代码示例
+请参考[项目](https://github.com/jituanlin/cookbook/tree/master/js-stack/monocle-ts).
 
-### 补充说明`prism`, `optional`, `traversal`, `iso`
+### 补充说明
 
+#### `prism`
+[monocle的官方文档中](https://www.optics.dev/Monocle/) 将`prism`定义为使用于`sum type`类型的`optics`, 
+笔者认为更广泛地来讲, `prism`应该定义为: 用于两个[injective](https://www.wikiwand.com/en/Injective_function) 的类型(即,`B => Option<A>`且`A => B`)的转换.
+如, `string => number`之间的转换是有可能失败的, 但`number => string`的类型转换总是可以成功的,.
 
+其`ADT`定义为:
+```typescript
+export interface Prism<S, A> {
+  readonly getOption: (s: S) => Option<A>
+  readonly reverseGet: (a: A) => S
+}
+```
 
+详细代码示例请参考[项目](https://github.com/jituanlin/cookbook/tree/master/js-stack/monocle-ts) (下同, 不再赘述).
 
+#### `iso`
+`iso`即为同构(isomorphic)的缩写, 同构在此定义为: 用于两个[bijective](https://www.wikiwand.com/en/Bijection) 的类型(即,`B => A`且`A => B`)的转换.
+即两个类型之间的转换是不会丢失信息的, 如object可通过`Object.entries`转换成`[key,value]`数组, 而`[key,value]`数组亦可通过`Object.fromEntries`
+转换成object, 故转换之间之间没有任何信息丢失, 可称`Object.fromEntries`与`Object.entries`是同构的.
 
+其`ADT`定义:
+```typescript
+export interface Iso<S, A> {
+  readonly get: (s: S) => A
+  readonly reverseGet: (a: A) => S
+}
+```
+
+#### `index`
+
+#### `fold`
 ---
 参考:
 - [思维导图源文件](https://github.com/jituanlin/public-docs/blob/master/mindmaps/optics.png).
