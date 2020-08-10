@@ -67,7 +67,7 @@ paginate_path:         /page-:num/
 # ========================================================================================
 
 # Sidebar image and theme color of the site.
-accent_image:          /assets/img/sidebar-bg.jpg
+accent_image:          /assets/imgs/rich-tervet-mD0VZgOYvgo-unsplash.jpg
 accent_color:          rgb(150, 194, 193)
 
 # This is used for the `theme-color` meta tag,
@@ -279,3 +279,4 @@ compress_html:
 
 sass:
   style:               compressed
+
