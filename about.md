@@ -16,14 +16,14 @@ hide_description: true
 
 # Setting `menu` will generate an entry in the sidebar.
 menu: true
-order: 4
+order: 1
 ---
 
 
 ## 关于我
-前端开发人员, 偶尔也写写后端
+前端开发人员, 偶尔也写写后端.
 
-熟悉函数式编程, 面向对象编程
+熟悉函数式编程, 面向对象编程.
 
 平时喜欢看看闲书, 也喜欢看看电影, 有兴趣可以关注我的[豆瓣](https://www.douban.com/people/184603717/).
 

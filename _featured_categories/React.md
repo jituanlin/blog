@@ -3,14 +3,14 @@
 layout: list
 
 # The title of the tag's page.
-title: JS
+title: React
 
 # The name of the tag, used in a post's front matter (e.g. tags: [<slug>]).
-slug: JS
+slug: React
 
 # Setting `menu` will generate an entry in the sidebar for this tag.
 menu: true
-order: 4
+order: 6
 ---
 
-![alt text](/assets/imgs/maarten-van-den-heuvel-gZXx8lKAb7Y-unsplash.jpg)
+![alt text](/assets/imgs/kamila-maciejewska-SD-XcunUlKQ-unsplash.jpg)
