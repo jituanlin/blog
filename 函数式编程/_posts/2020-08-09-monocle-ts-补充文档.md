@@ -106,7 +106,58 @@ export interface Iso<S, A> {
 #### `traversal`
 `traversal`用于对数据中的某一部分可遍历的数据(`Record`, `Array` ...)进行操作, 类似`map`之于`Array`.
 
-`optics.fromTraversable`提供了一个便利的方法获取`traversal`, 其参数`Traversable<T>`为`ADT`, 该`ADT`核心函数为
+`traversal`作为`ADT`, 其定义为:
+```typescript
+export interface Traversal<S, A> {
+  readonly modifyF: ModifyF<S, A>
+}
+
+export interface ModifyF<S, A> {
+  <F>(F: Applicative<F>): (f: (a: A) => HKT<F, A>) => (s: S) => HKT<F, S>
+}
+```
+
+`modifyF`是`Traversal`作为一个`optics`的核心, `modify`即意味着修改, 而末尾的`F`即表示这个修改是带有副作用的.
+
+字母`F`是`Functor`的缩写, 而函数式编程中使用`Functor`表示副作用, 故`fa`一般表示`Functor[A]`(scala语法), 
+`fab`一般表示`Functor[A=>B]`. 
+
+通过`modifyF`, 我们可以实现`set`, `modify`, 甚至`get`(理论上可行, monocle未如此实现)操作. 以下为其简化版实现:
+```typescript
+import * as fp from 'fp-ts';
+import {Kind, URIS} from 'fp-ts/lib/HKT';
+
+export class Traversal<S, A> {
+  constructor(
+    private readonly modifyF: <F extends URIS>(
+      F: fp.applicative.Applicative1<F>
+    ) => <B>(f: (a: A) => Kind<F, B>) => (s: S) => Kind<F, S>
+  ) {}
+
+  modify: <B>(f: (a: A) => B) => (s: S) => S = f =>
+    this.modifyF(fp.identity.identity)(f);
+
+  set: (a: A) => (s: S) => S = a => this.modify(() => a);
+}
+```
+
+初始化`traversal`示例:
+```typescript
+export const traversalArray = <T>(): Traversal<T[], T> =>
+  new Traversal<T[], T>(F => f => s => {
+    const fbs = s.map(f);
+    return fp.array.array.reduce(fbs, F.of([]), (fbs, fb) =>
+      F.ap(
+        F.map(fb, b => bs => bs.concat(b)),
+        fbs
+      )
+    );
+  });
+```
+
+
+
+除了通过直接传入`modifyF`初始化`traversal`, `optics.fromTraversable`还提供了一个便利的方法获取`traversal`, 其参数`Traversable<T>`为`ADT`, 该`ADT`核心函数为
 `Traverse`, 其类型声明如下(Scala语法):
 
 ```
@@ -135,13 +186,16 @@ trait Traverse[F[_]]{
   }
 ```
 
-其中`foldMap`的含义为(参见`Lens.asFold`): 最终返回的函数`(s: S) => M`将使用函数`f: (a: A) => M`和`Monoid<M>`将`s`中
-的`A`一个个取出来, 操作后最终得出`M`.
+其中`foldMap`的含义为(参见`Lens.asFold`): 从最终返回的函数`(s: S) => M`中的参数`s`取出一系列`A`, 传入函数`f`,
+得到一系列`M`, 再将这一系列`M`使用`Monoid<M>`的实例的`concat`合并成一个最终`(s: S) => M`返回的`M`.
+
+`Traversable.asFold`方法体现了*foldMap为Traverse的特殊化实现*这一条定理, 详情请阅读[此文档](https://typelevel.org/cats/datatypes/const.html).
 
 ---
 参考:
 - [思维导图源文件](https://github.com/jituanlin/public-docs/blob/master/mindmaps/optics.png).
 - [scalac上一篇质量上乘的文章](https://scalac.io/scala-optics-lenses-with-monocle/)
+- [如何利用modifyF实现get操作](https://typelevel.org/cats/datatypes/const.html)
 
 --- 
 注:
