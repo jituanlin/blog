@@ -78,7 +78,7 @@ optics为一种工具, 用于专注于复杂不可变数据结构中的*特定�
 #### `prism`
 [monocle的官方文档中](https://www.optics.dev/Monocle/) 将`prism`定义为使用于`sum type`类型的`optics`, 
 笔者认为更广泛地来讲, `prism`应该定义为: 用于两个[injective](https://www.wikiwand.com/en/Injective_function) 的类型(即,`B => Option<A>`且`A => B`)的转换.
-如, `string => number`之间的转换是有可能失败的, 但`number => string`的类型转换总是可以成功的,.
+如, `string => number`之间的转换是有可能失败的, 但`number => string`的类型转换总是可以成功的.
 
 其`ADT`定义为:
 ```typescript
