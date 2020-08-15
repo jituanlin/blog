@@ -9,7 +9,7 @@ title: React hook 常见陷阱
 
 该部分内容为[此博客](https://dmitripavlutin.com/react-hooks-stale-closures/) 的归纳总结.
 
-```jsx harmony
+```typescript jsx
 import React, { useEffect, useState } from "react";
 
 export const StaleClosureExample = () => {
