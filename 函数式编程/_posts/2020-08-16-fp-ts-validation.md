@@ -1,7 +1,7 @@
 ---
 layout: post
-title: 代数数据类型
+title: fp-ts validation
 ---
 
-# 代数数据类型
-``
+# fp-ts validation
+
