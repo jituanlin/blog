@@ -92,6 +92,7 @@ export interface Prism<S, A> {
 
 #### `iso`
 `iso`即为同构(isomorphic)的缩写, 同构在此定义为: 用于两个[bijective](https://www.wikiwand.com/en/Bijection) 的类型(即,`B => A`且`A => B`)的转换.
+
 即两个类型之间的转换是不会丢失信息的, 如object可通过`Object.entries`转换成`[key,value]`数组, 而`[key,value]`数组亦可通过`Object.fromEntries`
 转换成object, 故转换之间之间没有任何信息丢失, 可称`Object.fromEntries`与`Object.entries`是同构的.
 
