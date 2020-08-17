@@ -3,11 +3,11 @@ layout: post
 title: HTTP cookie
 ---
 
-# HTTP/2
-本文为[该文档](https://github.com/jituanlin/public-docs/blob/master/public-mindmaps/HTTP%20code.png?raw=true) 的学习笔记
+# HTTP cookie
+本文为[该文档](TODO) 的学习笔记
 
 思维导图如下:
-![思维导图](https://github.com/jituanlin/public-docs/blob/master/public-mindmaps/HTTP%20code.xmind)
+![思维导图](TODO)
 
 
 --- 
