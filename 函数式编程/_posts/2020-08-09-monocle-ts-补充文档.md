@@ -9,7 +9,7 @@ title: monocle-ts 补充文档
 请先阅读[scala实现版本的文档](https://www.optics.dev/Monocle/).
 
 知识体系预览:
-![思维导图](https://raw.githubusercontent.com/jituanlin/public-docs/master/mindmaps/optics.png)
+![思维导图](https://raw.githubusercontent.com/jituanlin/public-docs/master/public-mindmaps/optics.png)
 
 ## 相关类型知识
 在进入正题之前, 我们先介绍下一些涉及到的类型方面的术语.
@@ -194,7 +194,7 @@ trait Traverse[F[_]]{
 
 ---
 参考:
-- [思维导图源文件](https://github.com/jituanlin/public-docs/blob/master/mindmaps/optics.png).
+- [思维导图源文件](https://github.com/jituanlin/public-docs/blob/master/public-mindmaps/optics.png).
 - [scalac上一篇质量上乘的文章](https://scalac.io/scala-optics-lenses-with-monocle/)
 - [如何利用modifyF实现get操作](https://typelevel.org/cats/datatypes/const.html)
 
