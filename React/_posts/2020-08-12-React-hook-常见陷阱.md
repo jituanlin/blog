@@ -146,11 +146,6 @@ export const UseEffectToSetStateExample = () => {
 且引入其他类型后, 难以保持类型设计上的正交性, 比如代码示例中的`student`, `undefined`表示获取数据中, 日后扩展为`null`
 表示获取数据失败, 再后来直接使用`-1`表示数据正在异步计算中稍后重试?
 
-## 抵制`useRequest`的诱惑
-React的hook有一种魔力, 让人不禁想写一个`useRequest`.
-
----
-
 参考:
 
 - [关于 stale closure 的博客](https://dmitripavlutin.com/react-hooks-stale-closures/)
