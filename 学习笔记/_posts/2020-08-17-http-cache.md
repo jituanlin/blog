@@ -1,6 +1,7 @@
 ---
 layout: post
 title: HTTP cache
+tags:       [网络]
 ---
 
 # HTTP cache
