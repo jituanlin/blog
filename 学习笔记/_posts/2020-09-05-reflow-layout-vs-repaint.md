@@ -1,6 +1,7 @@
 ---
 layout: post
 title: reflow/layout vs repaint
+tags:       [浏览器]
 ---
 
 # reflow/layout vs repaint
