@@ -1,6 +1,6 @@
 ---
 layout: post
-title: nodejs解析http-body的基本过程
+title: nodejs解析body的基本过程
 tags:       [nodejs]
 ---
 
