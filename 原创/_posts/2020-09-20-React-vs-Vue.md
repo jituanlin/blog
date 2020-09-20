@@ -47,6 +47,8 @@ render和update, 参考[实例代码证明](https://github.com/jituanlin/cookboo
 
 而对React来说, 为了做到精确更新, 其内部用到了属性拦截, 这使得在一开始进行template渲染的时候需要进行
 依赖收集, 降低了初始渲染的速度.
+
 ---
+
 参考:
 - [React官方博客: mixin的弊端](https://reactjs.org/blog/2016/07/13/mixins-considered-harmful.html#:~:text=To%20ease%20the%20initial%20adoption,the%20same%20problem%20with%20composition.)
