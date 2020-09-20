@@ -46,6 +46,7 @@ hook将HOC的线性依赖转换为树形的聚合依赖.
 
 ## 虚拟DOM vs 依赖更新追踪
 Vue可以做到精确更新, 只有当组件的state或者props发生变化的时候, 组件才会被render和触发component update.
+
 而React中, 哪怕组件本身没有任何state和props, 只要该组件在其他组件的render函数中被调用, 都会触发组件的
 render和update, 参考[实例代码证明](https://github.com/jituanlin/cookbook/blob/master/react-stack/src/pages/whether-react-update-if-props-nochanged/index.tsx).  
 
