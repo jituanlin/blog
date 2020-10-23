@@ -1,6 +1,7 @@
 ---
 layout: post
 title: nodejs steam
+tags:       [nodejs]
 ---
 
 # nodejs steam
