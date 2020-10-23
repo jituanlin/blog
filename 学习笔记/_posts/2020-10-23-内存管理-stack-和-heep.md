@@ -12,7 +12,7 @@ tags:       [js]
 
 根据我现在的理解, 这是错误的, 其自洽的解释是(以java的内存实现为例):
 1. 所有的object都是储存在heap中.
-2. primitive和object reference类型的变量储存在哪, 依据变量所属方区分.
+2. primitive和object reference类型的变量储存的位置视变量所属方而定.
 方法相关的变量(local variable/parameter/...)储存在stack上,
 作用于超出方法作用域的, 储存于heap上.
 3. 其他机制在此忽略...
