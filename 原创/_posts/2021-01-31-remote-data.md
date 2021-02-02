@@ -1,5 +1,7 @@
 ---
-layout: post title: remote-data tags:       [函数式编程]
+layout: post 
+title: remote-data 
+tags:       [函数式编程]
 ---
 
 # `remote-data`
