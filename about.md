@@ -34,7 +34,7 @@ order: 99
 许多知识结构化的梳理直接使用思维导图作为呈现, *建议直接阅读*[思维导图](https://github.com/jituanlin/public-docs/tree/master/public-mindmaps).
 
 以下为思维导图的目录:
-```shell
+```
 public-mindmaps/
 ├── computer-basic
 │   ├── algorithms
