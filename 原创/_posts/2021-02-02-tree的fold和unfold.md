@@ -171,5 +171,5 @@ export const treeTitle: TreeTitle = F.tree.unfoldTree<Title, number>(1, id => {
 
 
 ## 引用
-- [使用`monocle-ts`对树进行immutable式修改](https://github.com/jituanlin/cookbook/blob/master/react-stack/src/pages/using-tree-in-front-end/optics/section.ts) 
-- [可运行的所有示例的demo](https://github.com/jituanlin/cookbook/tree/master/react-stack/src/pages/using-tree-in-front-end)
+- [使用`monocle-ts`对树进行immutable式修改](https://github.com/polymona/cookbook/blob/master/react-stack/src/pages/using-tree-in-front-end/optics/section.ts) 
+- [可运行的所有示例的demo](https://github.com/polymona/cookbook/tree/master/react-stack/src/pages/using-tree-in-front-end)

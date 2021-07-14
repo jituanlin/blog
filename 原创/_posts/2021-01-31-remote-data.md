@@ -207,6 +207,6 @@ type RemoteDataSequnce<M> = Sequence<M, RemoteData>
 
 ## 参考
 - [remote-ts github仓库](https://github.com/devexperts/remote-data-ts)
-- [fromQuery的实现](https://github.com/jituanlin/cookbook/blob/master/react-stack/src/utils/remoteData.ts)
+- [fromQuery的实现](https://github.com/polymona/cookbook/blob/master/react-stack/src/utils/remoteData.ts)
 - [Traversable教程](https://typelevel.org/cats/typeclasses/traverse.html)
 - [Applicative教程](https://typelevel.org/cats/typeclasses/applicative.html)

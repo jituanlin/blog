@@ -10,7 +10,7 @@ tags:       [函数式编程]
 请先阅读[scala实现版本的文档](https://www.optics.dev/Monocle/).
 
 知识体系预览:
-![思维导图](https://raw.githubusercontent.com/jituanlin/public-docs/master/public-mindmaps/optics.png)
+![思维导图](https://raw.githubusercontent.com/polymona/public-docs/master/public-mindmaps/optics.png)
 
 ## 相关类型知识
 在进入正题之前, 我们先介绍下一些涉及到的类型方面的术语.
@@ -68,11 +68,11 @@ optics为一种工具, 用于专注于复杂不可变数据结构中的*特定�
 
 形如`optics.fromTraversable`等为工厂函数, 返回类型皆为`optics.Prism`等`class`的对象.
 
-形如`optics.traversal`等皆为模块, 模块中多为类型和**函数**定义, 其中类型如`optics.traversal.Traversal`皆为[ADT](https://jituanlin.github.io/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/2020-07-27-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%AF%BC%E8%A8%80/#%E4%BB%A3%E6%95%B0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B),
+形如`optics.traversal`等皆为模块, 模块中多为类型和**函数**定义, 其中类型如`optics.traversal.Traversal`皆为[ADT](https://polymona.github.io/%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B/2020-07-27-%E5%87%BD%E6%95%B0%E5%BC%8F%E7%BC%96%E7%A8%8B%E5%AF%BC%E8%A8%80/#%E4%BB%A3%E6%95%B0%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B),
 而非`class`.
 
 ### 代码示例
-请参考[项目](https://github.com/jituanlin/cookbook/tree/master/js-stack/monocle-ts).
+请参考[项目](https://github.com/polymona/cookbook/tree/master/js-stack/monocle-ts).
 
 ### 补充说明
 
@@ -89,7 +89,7 @@ export interface Prism<S, A> {
 }
 ```
 
-详细代码示例请参考[项目](https://github.com/jituanlin/cookbook/tree/master/js-stack/monocle-ts) (下同, 不再赘述).
+详细代码示例请参考[项目](https://github.com/polymona/cookbook/tree/master/js-stack/monocle-ts) (下同, 不再赘述).
 
 #### `iso`
 `iso`即为同构(isomorphic)的缩写, 同构在此定义为: 用于两个[bijective](https://www.wikiwand.com/en/Bijection) 的类型(即,`B => A`且`A => B`)的转换.
@@ -195,7 +195,7 @@ trait Traverse[F[_]]{
 
 ---
 参考:
-- [思维导图源文件](https://github.com/jituanlin/public-docs/blob/master/public-mindmaps/optics.png).
+- [思维导图源文件](https://github.com/polymona/public-docs/blob/master/public-mindmaps/optics.png).
 - [scalac上一篇质量上乘的文章](https://scalac.io/scala-optics-lenses-with-monocle/)
 - [如何利用modifyF实现get操作](https://typelevel.org/cats/datatypes/const.html)
 

@@ -1,3 +1,3 @@
-# Jituanlin's blog
+# polymona's blog
 
-see https://jituanlin.github.io/
+see https://polymona.github.io/
