@@ -3,13 +3,13 @@
 # You can change `author1` to your shortname.
 author1:
   # Replace <...> with your own (remove the < >)
-  name:             Jituan Lin
+  name:            polymona
   email:           jituanlin@gmail.com
 
   # Used at the bottom of each page and at the top of the `about` layout
   # Markdown enabled, can use multiple paragraphs (enabled by `|`)
   about:             |
-    林集团, 前端工程师, 偶尔也写写后端.
+    前端工程师, 偶尔也写写后端.
 
 
   # Social media icons in sidebar.
